@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Extra Credit - Home</title>
+    <script type="text/javascript">
+        function noenter() {
+            return !(window.event && window.event.keyCode == 13);
+        }
+    </script>
+</head>
+
+<body>
+    <p class="title">Extra Credit</p>
+    <div class="main2">
+        <h2>Testing Phase</h2>
+        <div style="display:flex">
+            <!-- <div> -->
+                <div id="imgNo" class="imgPrompt"></div>
+            <!-- </div> -->
+            <div style="width:60%;" id="imageContainer"></div>
+            <div style="text-align: right" id="imgQuality" class="imgPrompt"></div>
+
+        </div>
+        <!-- <form> -->
+        <!-- <div id="guess"> -->
+            <p>Select the most appropriate category for the above image. (Hover over a category to see its training images)</p>
+            <!-- (Describe it in 1 or 2 words. 
+                    If you are uncertain or don't see anything specific, put None).
+                    You can either click on your choice, or use numeric keys to select the confidence level of your choice.
+                </p>
+                <input onkeypress="return noenter()" class="un" id="guessInput" value='' type="text"
+                    placeholder="Enter your guess (If you are uncertain, put None)" name="guessInput" /></p> -->
+        <!-- </div> -->
+        <div class="tab">
+            <div class="grid-container-3">
+            </div>
+        </div>
+
+        <p>What is your confidence level in your recognition? (1 lowest/unsure, 5 highest/certain). Either click or use numeric keys.</p>
+        <div class="confidence">
+            <!-- <div class="grid-container-1"> -->
+            <!-- <label for="confidence" style="width:80%"><b>Confidence Level</b></label> -->
+            <div style="width:80%"></div>
+            <div class="grid-container-2">
+                <input onkeypress="return noenter()" type="radio" id="radio1" name="confidentLevel" value="1" />
+                <label for="1"><b>1</b></label>
+                <input onkeypress="return noenter()" type="radio" id="radio2" name="confidentLevel" value="2" />
+                <label for="2"><b>2</b></label>
+                <input onkeypress="return noenter()" type="radio" id="radio3" name="confidentLevel" value="3" />
+                <label for="3"><b>3</b></label>
+                <input onkeypress="return noenter()" type="radio" id="radio4" name="confidentLevel" value="4" />
+                <label for="4"><b>4</b></label>
+                <input onkeypress="return noenter()" type="radio" id="radio5" name="confidentLevel" value="5" />
+                <label for="5"><b>5</b></label>
+                <!-- </div> -->
+            </div>
+            <div style="width:100%;">
+                <button id="next" class="btn">Next &#8594</button>
+                <button id="finish" class="btn">Finish</button>
+            </div>
+        </div>
+
+        
+        <div id="tabcontentid" class="tabcontent">
+            <div id="cards"  class="cardsContainer"></div>
+        </div>
+
+        <!-- </form> -->
+    </div>
+</body>
+<script src="../static/js/constants.js"></script>
+<script src="../static/js/tester.js"></script>
+<script src="../static/js/trainer.js"></script>
+<script src="/static/lib/jquery/jquery.min.js"></script>
+<script src="/static/lib/popper/popper.min.js"></script>
+<script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        const tester = new Tester();
+        // tester.ready()
+        // const trainer = new Trainer(0);
+        // trainer.load();
+        // tester.ready()
+
+    });
+</script>
+
+
+</html>

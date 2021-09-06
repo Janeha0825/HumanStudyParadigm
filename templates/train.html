@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extra Credit - Home</title>
+  <script type="text/javascript">
+    function noenter() {
+      return !(window.event && window.event.keyCode == 13);
+    }
+  </script>
+</head>
+
+<body>
+  <p class="title">Extra Credit</p>
+  <div class="main">
+    <h3>Training Phase</h3>
+    <p>Please browse all categories and get familiar with them. In the next step, you will be asked to categorize images from these classes. You will have access to these images in the test stage by hovering over their category.</p>
+    <div id="tabid" class="tab">
+    </div>
+    <div id="tabcontentid" class="tabcontent">
+      <div id="cards" class="cardsContainer"></div>
+    </div>
+    <button type="submit" class="btn" id="next1">Next &#8594</button>
+  </div>
+</body>
+<script src="../static/js/constants.js"></script>
+
+<script src="../static/js/trainer.js"></script>
+<script src="/static/lib/jquery/jquery.min.js"></script>
+<script src="/static/lib/popper/popper.min.js"></script>
+<script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+<script>
+  $(function () {
+    const trainer = new Trainer(1);
+    // trainer.load();
+  });
+</script>
+
+
+</html>

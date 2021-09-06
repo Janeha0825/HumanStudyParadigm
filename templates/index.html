@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <!-- <link rel="icon" href="../static/img/favicon.ico"> -->
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="static/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in</title>
+</head>
+
+<body>
+    <p class="title">Extra Credit</p>
+    <div class="main1">
+        <form class="form1"  method="POST" action="/">
+            <div class="text">
+                <p>In the following, you will see a selection of images, each presented in different quality levels. Your task will be to state the class of the main object you see/recognize in each image and how confident you are in recognizing that.</p>
+                <p>In Training Phase: We will present 30 categories/classes of objects, each containing 15 images. You should browse all of them and get familiar with the different categories.</p>
+                <p>In Testing Phase: You will be asked to select the most appropriate class for several frames. You still have access to the images associated with each category in Training Stage by hovering over each category.</p>
+                <p>For each frame, you will need to select the class among the 30 available categories and also select your confidence level on a scale of 1 to 5 —1 being the lowest confidence level (not recognizing anything) and 5 being the highest confidence (almost 100% sure) — in recognition of the target. You can either click on the confidence level of your choice or use numeric keys.</p>
+                <p>By clicking on “Next” or hitting the enter/return key, a higher quality version of the current image will be presented, and your confidence level will be asked again. This procedure continues until all 10 different qualities of the same image are presented, then a different image will be shown. There will be a total of 10 different images, each with 10 different qualities, shown in the survey. On the last page, a string will be provided to you as a reference for completing the survey. Please save the string and provide it to the instructor for extra credit.</p>
+                <p>Participation is completely voluntary, and you can abandon the study at any time without giving any reasons (simply close the webpage).</p>
+                <p>We do not judge your performance in any way. We collect some basic demographic data that will support data analysis on an aggregate level, and we will not store/share any form of identifiable information with anyone.</p>
+                <p>By continuing, you confirm that you have read and understood the information and instructions on this page and that you freely agree to participate. The survey will take about 7 minutes.</p>
+            </div>
+            <div class="grid-container">
+                <label for="age"><b>Age</b></label>
+                <input class="un" type="number" placeholder="Enter Age" name="age" required />
+            </div>
+            <div class="grid-container">
+                <label for="gender"><b>Gender</b></label>
+                <div class="un1">
+                    <input type="radio" id="male" name="gender" value="male" required />
+                    <label for="male"><b>Male</b></label>
+                    <input type="radio" id="female" name="gender" value="female" required />
+                    <label for="female"><b>Female</b></label>
+                    <input type="radio" id="other" name="gender" value="other" required />
+                    <label for="other"><b>Other</b></label>
+                </div>
+            </div>
+            <button type="submit" class="btn" id="start">Start &#8594</button>
+        </form>
+    </div>
+
+
+</body>
+<!-- <script src="../static/js/constants.js"></script> -->
+<script src="../static/js/verifier.js"></script>
+<script src="/static/lib/jquery/jquery.min.js"></script>
+<script src="/static/lib/popper/popper.min.js"></script>
+<script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        const verifier = new Verifier();
+    });
+
+</script>
+
+</html>
